@@ -1,0 +1,65 @@
+/* Basic responsive landing page styles */
+:root{--accent:#0066cc;--muted:#666}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;margin:0;color:#222;line-height:1.5}
+
+/* Skip link (visible on keyboard focus) */
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:relative;left:auto;width:auto;height:auto;padding:0.5rem 1rem;background:#000;color:#fff;z-index:1000;border-radius:4px;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.site-header{background:#fff;border-bottom:1px solid #eee}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.logo{font-weight:700;color:var(--accent);margin:0}
+  .nav a{margin-left:1rem;color:#333;text-decoration:none;transition:color .15s ease, border-bottom .15s ease}
+  .nav a:hover, .nav a:focus{color:var(--accent);outline:none}
+  .nav a:focus{box-shadow:0 0 0 4px rgba(0,102,204,0.12);border-radius:4px}
+  .nav a.active{color:var(--accent);font-weight:700;border-bottom:2px solid var(--accent);padding-bottom:0.2rem}
+
+  /* Footer current page label */
+  .site-footer .current-page{font-weight:700;color:var(--accent);margin-left:0.5rem;display:inline-block}
+
+.hero{position:relative;color:#fff;padding:6rem 0;text-align:center;min-height:420px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));z-index:1}
+.hero-inner{position:relative;z-index:2;background:rgba(255,255,255,0.92);color:#111;display:inline-block;padding:2.5rem 3rem;border-radius:8px;box-shadow:0 8px 30px rgba(4,8,15,0.12);backdrop-filter:blur(4px);border:1px solid rgba(8,12,16,0.06)}
+.hero h2{color:#111;margin:0 0 0.5rem}
+.hero p{color:var(--muted);margin:0 0 1rem}
+.btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:0.6rem 1rem;border-radius:6px;text-decoration:none;box-shadow:0 6px 12px rgba(0,102,204,0.12)}
+
+h2,h3{color:#111}
+.services{padding:2rem 0}
+.services .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.service{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 2px 6px rgba(20,20,20,0.06);text-align:center}
+.service i{color:var(--accent);margin-bottom:0.4rem}
+
+.about{padding:1rem 0}
+.two-col{display:grid;grid-template-columns:1fr 320px;gap:1rem;align-items:start}
+
+.work{padding:2rem 0}
+.work .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.work-item img{width:100%;height:180px;object-fit:cover;border-radius:6px}
+
+.contact{padding:2rem 0}
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem}
+form{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 1px 6px rgba(20,20,20,0.06)}
+form input,form textarea{width:100%;padding:0.6rem;margin:0.4rem 0;border:1px solid #ddd;border-radius:4px}
+.contact-info{background:#fff;padding:1rem;border-radius:8px}
+.lead{color:var(--muted)}
+
+.site-footer{background:#f8f8f8;padding:1rem 0;margin-top:2rem}
+
+/* Mobile */
+@media(max-width:800px){
+  .two-col,.contact-grid{grid-template-columns:1fr}
+  /* Always show nav on narrow viewports */
+  .nav{display:flex;flex-direction:column;gap:0.5rem;padding-top:0.75rem}
+}
+
+/* Form status message */
+.form-status{margin-top:0.6rem;color:#064e3b;background:#e6fffa;padding:0.6rem;border-radius:6px;border:1px solid #c7f2e8}
+
+/* Floating WhatsApp button */
+.whatsapp-button{position:fixed;right:1rem;bottom:1rem;background:#25D366;color:#fff;padding:0.6rem 0.9rem;border-radius:50px;display:flex;align-items:center;gap:0.5rem;box-shadow:0 6px 18px rgba(2,6,23,0.15);text-decoration:none;font-weight:600}
+.whatsapp-button i{font-size:1.2rem}
+.whatsapp-button span{display:none}
+@media(min-width:600px){.whatsapp-button span{display:inline-block;padding-right:0.4rem}}

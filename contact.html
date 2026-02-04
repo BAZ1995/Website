@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — SecureTech Solutions</title>
+  <meta name="description" content="Contact SecureTech Solutions for a free site survey and quote for CCTV, networking, installation and hosting services.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-row">
+      <h1 class="logo">SecureTech Solutions</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Portfolio</a>
+        <a href="contact.html" class="cta">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section id="contact" class="contact">
+      <h3>Contact Us</h3>
+      <p class="lead">Get a free site survey and quote — available weekdays and weekends.</p>
+      <div class="contact-grid">
+        <form id="contactForm" action="https://formspree.io/f/yourFormID" method="POST">
+          <label for="name">Name</label>
+          <input id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button class="btn-primary" type="submit">Send Message</button>
+
+          <div id="formStatus" class="form-status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+        </form>
+
+        <div class="contact-info">
+          <h4>Contact Info</h4>
+          <p><strong>Email:</strong> <a href="mailto:info@securetech.example">info@securetech.example</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567 890</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/1234567890?text=Hello%20SecureTech%20Solutions%2C%20I%20would%20like%20a%20quote" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
+          <h4>Hosting & Deployment</h4>
+          <p>This static site is ready to upload to a standard cPanel host (e.g. Namecheap). Upload the files to the public_html directory or use FTP. If you prefer managed hosting, we can handle full setup and DNS pointing.</p>
+        </div>
+
+        <a href="https://wa.me/1234567890?text=Hello%20SecureTech%20Solutions%2C%20I%20need%20a%20quote" class="whatsapp-button" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>Chat</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> SecureTech Solutions — CCTV, Networking & Systems <span id="currentPage" class="current-page" aria-hidden="true"></span></p>
+      <p><small>Images: Unsplash • Fonts & Icons: Font Awesome</small></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
